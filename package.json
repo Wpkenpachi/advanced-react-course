@@ -9,11 +9,15 @@
     "lint": "npx eslint src --max-warnings=0",
     "prepare": "npx husky install"
   },
+  "husky": {
+    "hooks":  {
+      "pre-commit": "lint-staged"
+    }
+  },
   "lint-staged": {
     "src/**/*": [
       "npm run lint -- --fix"
-    ],
-    "*.js": "eslint --cache --fix"
+    ]
   },
   "dependencies": {
     "next": "10.0.9",
