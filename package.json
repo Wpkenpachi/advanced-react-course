@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "npx eslint src --max-warnings=0",
-    "prepare": "husky install"
+    "prepare": "npx husky install"
   },
   "husky": {
     "hooks": {
