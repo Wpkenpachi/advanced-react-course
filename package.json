@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "npx eslint src --max-warnings=0"
+    "lint": "npx eslint src --max-warnings=0",
+    "prepare": "husky install"
   },
   "husky": {
     "hooks": {
@@ -14,7 +15,9 @@
     }
   },
   "lint-staged": {
-    "src/**/*": ["npm run lint -- --fix"]
+    "src/**/*": [
+      "npm run lint -- --fix"
+    ]
   },
   "dependencies": {
     "next": "10.0.9",
